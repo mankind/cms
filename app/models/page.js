@@ -16,7 +16,6 @@ Page.reopenClass({
   
   {
     id:  1,
-    name: 'about',
     title: 'about page',
     body: 'great body',
     navbar: 'about',
@@ -27,7 +26,6 @@ Page.reopenClass({
   
   {
     id:  2,
-    name: 'contact',
     title: 'contact page',
     body: 'send an email',
     navbar: 'contact',
@@ -38,7 +36,6 @@ Page.reopenClass({
   
   {
     id:  3,
-    name: 'management',
     title: 'our management philosophy',
     body: 'we belive in people',
     navbar: 'management',
@@ -49,7 +46,6 @@ Page.reopenClass({
   
   {
     id:  4,
-    name: 'team',
     title: 'Team Page',
     body: 'we work hard & play hard',
     navbar: 'team',
@@ -59,7 +55,6 @@ Page.reopenClass({
   },
    {
     id:  5,
-    name: 'test',
     title: 'Test Page',
     body: 'we work',
     navbar: 'test',
