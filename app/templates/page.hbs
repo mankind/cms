@@ -1,7 +1,13 @@
+<br>
 {{navbar}} <br>
 
 {{#link-to 'page.edit'}} Edit this page{{/link-to}} <br>
 
 {{#link-to 'page.newChildPage'}} Add Sub Page to this tab{{/link-to}}
+
+<h3> child pages </h3>
+{{#each page in children}}
+    <li> {{#link-to 'page' page }} {{page.navbar}} {{/link-to}} </li>
+{{/each}}
 
 {{outlet}}
