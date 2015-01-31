@@ -1,0 +1,8 @@
+<form  {{action 'save' model on="submit"}} role="form">
+  <p>{{input type="text" placeholder="navbar" value=navbar required=true}}</p>
+  <p>{{input type="text" placeholder="sub section" value=title required=true}}</p>
+  <p>{{textarea placeholder="main body" value=body  cols="55" rows="6"}}</p>
+  <button type="submit"  class="btn btn-primary btn-default"> submit </button>
+    
+  <button {{action 'cancel' model}}  class="btn btn-danger btn-default"> Cancel</button>
+</form>
