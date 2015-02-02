@@ -7,8 +7,8 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
    this.resource('pages', function(){
-    this.resource('page', {path: '/:page_name'}, function() {
-     //this.resource('page', {path: '/:page_id'}, function() {
+      //this.resource('page', {path: '/:page_name'}, function() {
+     this.resource('page', {path: '/:page_id'}, function() {
        this.route('edit');
        this.route('newChildPage');
      });  //closes 'page'
@@ -16,6 +16,7 @@ Router.map(function() {
      this.route('new');
    });  //closes 'pages
 
+  this.route('login');
 });
 
 export default Router;

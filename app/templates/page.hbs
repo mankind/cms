@@ -1,13 +1,16 @@
-<br>
-{{navbar}} <br>
+<br> <br>
+{{navbar}} 
+ <br>  
 
-{{#link-to 'page.edit'}} Edit this page{{/link-to}} <br>
+<p> {{#link-to 'page.edit'}} Edit <b> {{navbar}} page</b> {{/link-to}} </p>
 
-{{#link-to 'page.newChildPage'}} Add Sub Page to this tab{{/link-to}}
+<p>{{#link-to 'page.newChildPage'}} Add Sub Page to <b>{{navbar}} page</b> {{/link-to}}</p>
 
 <h3> child pages </h3>
 {{#each page in children}}
+   {{log 'child page' page}}
     <li> {{#link-to 'page' page }} {{page.navbar}} {{/link-to}} </li>
 {{/each}}
-
+ 
 {{outlet}}
+

@@ -1,6 +1,6 @@
-import Ember from 'ember';
+import Authenticated from '../authenticated';
 
-export default Ember.Route.extend({
+export default Authenticated.extend({
 
   model: function(){
     var pageParent = this.modelFor('page');
@@ -37,7 +37,7 @@ export default Ember.Route.extend({
          function(error) {
           // work with person that failed to save
            page.rollback();
-            //console.log("An error occured - Please try again", error);
+           console.log("An error occured - Please try again", error);
           }
        ); 
 

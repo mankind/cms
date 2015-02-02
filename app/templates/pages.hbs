@@ -1,8 +1,10 @@
-{{#each item in parentPages}}
- 
-  <li>{{#link-to 'page' item}} {{item.navbar}} {{/link-to}}</li>  
- {{/each}} 
 
+{{#each item in parent}}
+   {{log 'item is' item}}
+  <li>{{#link-to 'page' item}} {{item.navbar}} {{/link-to}}</li>  
+ {{/each}}
+ 
+<br>
 {{#link-to 'pages.new'}}create parent pages{{/link-to}}
 
 

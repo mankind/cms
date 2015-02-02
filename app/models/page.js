@@ -4,6 +4,7 @@ var Page = DS.Model.extend({
   navbar: DS.attr('string'),
   title: DS.attr('string'),
   body: DS.attr('string'),
+  user: DS.belongsTo('user'),
 
   parent: DS.belongsTo('page', {inverse: 'children', embedded: true}),
   children: DS.hasMany('page', {inverse: 'parent', async: true}),
@@ -20,8 +21,8 @@ Page.reopenClass({
     body: 'great body',
     navbar: 'about',
     parent: null,
-    children: [3, 4 ]
-    
+    children: [3, 4 ],
+    user: 1
   },
   
   {
@@ -30,8 +31,8 @@ Page.reopenClass({
     body: 'send an email',
     navbar: 'contact',
     parent: null,
-    children: [ ]
-    
+    children: [ ],
+    user: 1  
   },
   
   {
@@ -40,8 +41,8 @@ Page.reopenClass({
     body: 'we belive in people',
     navbar: 'management',
     parent: 1,
-    children: [ ]
-    
+    children: [ ],
+    user: 1  
   },
   
   {
@@ -50,8 +51,8 @@ Page.reopenClass({
     body: 'we work hard & play hard',
     navbar: 'team',
     parent: 1,
-    children: [ ]
-    
+    children: [ ],
+    user: 1
   },
    {
     id:  5,
@@ -59,8 +60,8 @@ Page.reopenClass({
     body: 'we work',
     navbar: 'test',
     parent: null,
-    children: [ ]
-    
+    children: [ ],
+    user: 1
   }
   
 ]

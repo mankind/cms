@@ -1,6 +1,8 @@
-import Ember from 'ember';
+//import Ember from 'ember';
 
-export default Ember.Route.extend({
+import Authenticated from '../authenticated';
+
+export default Authenticated.extend({
   
     model: function(){
     
@@ -29,7 +31,7 @@ export default Ember.Route.extend({
          function(error) {
           // work with person that failed to save
            self.get('currentModel').rollback();
-           //console.log("An error occured", error);
+           console.log("An error occured", error);
           }
        );   
      },
