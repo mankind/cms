@@ -1,9 +1,9 @@
 import DS from 'ember-data';
 
 var User = DS.Model.extend({
-  username: DS.attr('string'),
-  password: DS.attr('string'),
-  pages: DS.hasMany('pages')
+      username: DS.attr('string'),
+      password: DS.attr('string'),
+      pages: DS.hasMany('pages')
 });
 
 User.reopenClass({

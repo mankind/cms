@@ -1,15 +1,13 @@
 import DS from 'ember-data';
 
 var Page = DS.Model.extend({
-  navbar: DS.attr('string'),
-  title: DS.attr('string'),
-  body: DS.attr('string'),
-  user: DS.belongsTo('user'),
+      navbar: DS.attr('string'),
+      title: DS.attr('string'),
+      body: DS.attr('string'),
+      user: DS.belongsTo('user'),
 
-  parent: DS.belongsTo('page', {inverse: 'children', embedded: true}),
-  children: DS.hasMany('page', {inverse: 'parent', async: true}),
-
-  
+      parent: DS.belongsTo('page', {inverse: 'children', embedded: true}),
+      children: DS.hasMany('page', {inverse: 'parent', async: true}), 
 });
 
 Page.reopenClass({
